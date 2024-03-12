@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index]
 
+  resources :costumes, only:[ :index ]
 end
