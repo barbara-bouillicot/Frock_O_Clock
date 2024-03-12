@@ -1,1 +1,39 @@
 // Specific CSS for your home-page
+
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://www.evelyncosplay.de/wp-content/uploads/2022/11/Charakter-Ciri-Videospiel-The-Witcher-3-.-Wild-Hunt--1024x787.png");
+  margin : 0;
+  background-size: cover;
+  background-position: center;
+  padding: 300px 10px;
+  transform: scaleX(-1);
+}
+
+.banner h1{
+  color: rgba(255,255,255,0.6);
+  font-size: 60px;
+  text-align: left;
+}
+
+.container {
+  transform: scaleX(-1);
+  padding: 16px;
+
+}
+
+.banner .btn {
+  padding: 30px 60px;
+  background-color: rgba(51, 117, 114, 0.7);
+  color: white;
+  border-radius: 50px;
+  font-size: 30px;
+  margin-top: 30px;
+  object-fit: cover;
+  display: inline-block;
+  border-color: rgb(48, 78, 78);
+
+}
+
+.banner .btn:hover{
+  background-color: rgba(36, 83, 81, 0.7);
+}
