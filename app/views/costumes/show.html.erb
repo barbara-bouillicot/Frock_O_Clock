@@ -1,0 +1,11 @@
+<div class="container">
+<h1><%= @costume.name %></h1>
+<h3><%= @costume.price %></h3>
+<p>category: <%= @costume.category %></p>
+<p>size: <%= @costume.size %></p>
+<p>material: <%= @costume.material %></p>
+<p>description: <%= @costume.description %></p>
+<%= link_to "add a new costume", new_costume_path %>
+
+<%= link_to "back to all costumes", costumes_path %>
+</div>

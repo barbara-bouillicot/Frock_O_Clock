@@ -1,7 +1,12 @@
-<h1>All the costumes</h1>
+<div class="container">
+<h1>Costumes</h1>
 
 <ul>
 <% @costumes.each do |costume| %>
-  <li> <%= costume.name %><%= costume.price %></li>
+  <li> <%= link_to costume.name, costume_path(costume) %></li>
 <% end %>
 </ul>
+
+<%= link_to "Create a new costume", new_costume_path %>
+
+</div>
