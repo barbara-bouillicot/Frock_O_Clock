@@ -1,0 +1,7 @@
+<h1>All the costumes</h1>
+
+<ul>
+<% @costumes.each do |costume| %>
+  <li> <%= costume.name %><%= costume.price %></li>
+<% end %>
+</ul>
