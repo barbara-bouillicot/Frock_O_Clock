@@ -1,6 +1,14 @@
 <h1>All Bookings</h1>
 
   <ul>
-  <li><%= @bookings.each do |booking| %></li>
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= link_to "Booking {booking_id}", booking_path(booking) %>
+    </li>
+    <% end %>
   </ul>
-<% end %>
+
+  # fix the booking_id
+  # find a  way to list out all the bookings with name dates and costume name
+  # figure sum for price
+  # add edit method
