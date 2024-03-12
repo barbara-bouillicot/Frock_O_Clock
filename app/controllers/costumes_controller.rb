@@ -1,5 +1,6 @@
 class CostumesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+
   def index
     @costumes = Costume.all
   end
@@ -14,13 +15,18 @@ class CostumesController < ApplicationController
     if @costume.save
       redirect_to costume_path(@costume)
     else
-      raise
       render :new, status: :unprocessable_entity
     end
   end
 
   def show
     @costume = Costume.find(params[:id])
+  end
+
+  def destroy
+    @costume = Costume.find(params[:id])
+    @costume.destroy
+    redirect_to costumes_path, status: :see_other
   end
 
   private
