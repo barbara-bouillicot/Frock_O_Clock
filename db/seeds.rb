@@ -7,3 +7,22 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+user = User.create(
+  first_name:"Peter",
+  last_name:"Piper",
+  email:"peter@piper.com",
+  password:"123456",
+  location:"somewhere, USA"
+)
+
+costume = Costume.create(
+  name:"Zelda",
+  category:"videogame",
+  size:"XXXXL",
+  material:"rubber",
+  description:"rubber suit of the princess",
+  price:"12.99",
+  user_id:1)
+
+
