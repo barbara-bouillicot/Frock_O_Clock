@@ -1,0 +1,18 @@
+<div class="container">
+<h1><%= @costume.name %></h1>
+<h3>$<%= @costume.price %></h3>
+<p><em>category:</em> <%= @costume.category %></p>
+<p><em>size:</em> <%= @costume.size %></p>
+<p><em>material:</em> <%= @costume.material %></p>
+<p><em>description:</em> <%= @costume.description %></p>
+
+
+<p><a href="#" class="text-success">book this costume!</a></p>
+
+<p><%= link_to "my costumes", my_costumes_costumes_path %></p>
+
+<p><%= link_to "all costumes", costumes_path %></p>
+
+
+
+</div>
