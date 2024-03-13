@@ -6,11 +6,16 @@
 <p><em>material:</em> <%= @costume.material %></p>
 <p><em>description:</em> <%= @costume.description %></p>
 
+<p><%= link_to "edit", edit_costume_path(@costume) %></p>
+
 <p><%= link_to "remove", costume_path(@costume), data: { turbo_method: :delete, turbo_confirm: "are you sure?" } %></p>
 
 <p><%= link_to "add a new costume", new_costume_path %></p>
 
+<p><a href="#">book this costume!</a></p>
+
 <p><%= link_to "back to all costumes", costumes_path %></p>
+
 
 
 </div>

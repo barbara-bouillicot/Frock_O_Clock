@@ -23,6 +23,17 @@ class CostumesController < ApplicationController
     @costume = Costume.find(params[:id])
   end
 
+  def edit
+    @costume = Costume.find(params[:id])
+  end
+  # add update action
+
+  def update
+    @costume = Costume.find(params[:id])
+    @costume.update(costume_params)
+    redirect_to costume_path(@costume)
+  end
+
   def destroy
     @costume = Costume.find(params[:id])
     @costume.destroy
