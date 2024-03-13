@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: "pages#home"
 
-  resources :bookings, only: [:index , :show , :new , :create , :destroy]
+  resources :bookings, only: [:index , :show , :destroy]
 
-  resources :costumes, only:[ :index , :show]
+  resources :costumes, only:[ :index , :show] do
+    resources :bookings, only:[:new, :create]
+  end
 end

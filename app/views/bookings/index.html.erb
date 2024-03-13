@@ -1,14 +1,24 @@
-<h1>All Bookings</h1>
+<h1 class="text-center">All Bookings</h1>
 
-  <ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      <%= link_to "Booking {booking_id}", booking_path(booking) %>
-    </li>
-    <% end %>
-  </ul>
-
-  # fix the booking_id
-  # find a  way to list out all the bookings with name dates and costume name
-  # figure sum for price
-  # add edit method
+<table class="table">
+  <thead>
+    <tr>
+      <th>Booking ID</th>
+      <th>User</th>
+      <th>Costume</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  <thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+    <tr>
+      <td><%= link_to booking.id, booking_path(booking) %></td>
+      <td><%= booking.user.first_name %></td>
+      <td><%= booking.costume.name %></td>
+      <td><%= booking.start_date %></td>
+      <td><%= booking.end_date %></td>
+    </tr>
+  <% end %>
+ </tbody>
+</table>
