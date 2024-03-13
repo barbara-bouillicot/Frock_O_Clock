@@ -13,7 +13,7 @@ class CostumesController < ApplicationController
     @costume = Costume.new(costume_params)
     @costume.user = current_user
     if @costume.save
-      redirect_to costume_path(@costume)
+      redirect_to my_costumes_costumes_path(@costume)
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,7 +37,11 @@ class CostumesController < ApplicationController
   def destroy
     @costume = Costume.find(params[:id])
     @costume.destroy
-    redirect_to costumes_path, status: :see_other
+    redirect_to my_costumes_costumes_path, status: :see_other
+  end
+
+  def my_costumes
+    @costumes = Costume.where(user: current_user)
   end
 
   private
