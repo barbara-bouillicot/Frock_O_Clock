@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 gem "devise"
 
+# to hide the cloudinary secret key
+gem "dotenv-rails"
+
 ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
