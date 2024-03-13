@@ -40,6 +40,10 @@ class CostumesController < ApplicationController
     redirect_to costumes_path, status: :see_other
   end
 
+  def my_costumes
+    @costumes = Costume.where(user: current_user)
+  end
+
   private
 
   def costume_params

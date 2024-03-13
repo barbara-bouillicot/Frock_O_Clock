@@ -1,0 +1,7 @@
+<h1>My costumes</h1>
+
+<ul>
+<% @costumes.each do |costume| %>
+  <li> <%= link_to costume.name, costume_path(costume) %></li>
+<% end %>
+</ul>

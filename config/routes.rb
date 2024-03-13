@@ -10,5 +10,11 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: "pages#home"
 
-  resources :costumes, only:[ :index, :new, :create, :show, :destroy, :edit, :update ]
+  resources :costumes, only:[ :index, :new, :create, :show, :destroy, :edit, :update ] do
+    collection do
+      get :my_costumes
+    end
+  end
+
+
 end
