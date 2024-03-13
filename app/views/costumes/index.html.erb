@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Costumes</h1>
+<h1>All Costumes</h1>
 
 <ul>
 <% @costumes.each do |costume| %>
@@ -7,6 +7,8 @@
 <% end %>
 </ul>
 
-<%= link_to "Create a new costume", new_costume_path %>
+<p><%= link_to "list a new costume", new_costume_path %></p>
+
+<p><%= link_to "my costumes", my_costumes_costumes_path %></p>
 
 </div>
