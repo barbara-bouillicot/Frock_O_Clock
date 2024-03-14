@@ -19,25 +19,37 @@
 
 
 <div class="container my-3" style="height: 140vh">
-  <h1>All Costumes</h1>
+  <h1 class="text-center">All Costumes</h1>
+  <br>
+
+  <div class="costume-card-container">
 
   
 
-  <ul>
+
     <% if @costumes.any? %>
+
     <% @costumes.each do |costume| %>
-      <li> <%= link_to costume.name, costume_path(costume) %></li>
-        <% costume.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill" %>
-        <% end %>
+      <div class="costume-index-card">
+      <div class="costume-index-card-img" style="background-image:url('<%= cl_image_path costume.photos.first.key %>')">
+
+      </div>
+        <div class="card-body">
+          <h2><%= link_to costume.name, costume_path(costume) %></h2>
+          <h5 class="card-subtitle mb-2 text-muted">£<%= costume.price %>/day</h5>
+          <p class="card-text"><%= costume.description %></p>
+        </div>
+      </div>
     <% end %>
+
      <% else %>
           <em>Sorry, no costumes found.</em>
         <% end %>
-  </ul>
+ 
 
-  <p><%= link_to "list a new costume", new_costume_path %></p>
+  </div>
+  <br>
 
-  <p><%= link_to "my costumes", my_costumes_costumes_path %></p>
+
 
 </div>
