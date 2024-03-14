@@ -1,7 +1,17 @@
-<h1>All the costumes</h1>
+<div class="container my-3" style="height: 140vh">
+  <h1>All Costumes</h1>
 
-<ul>
-<% @costumes.each do |costume| %>
-  <li> <%= costume.name %><%= costume.price %></li>
-<% end %>
-</ul>
+  <ul>
+    <% @costumes.each do |costume| %>
+      <li> <%= link_to costume.name, costume_path(costume) %></li>
+        <% costume.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill" %>
+        <% end %>
+    <% end %>
+  </ul>
+
+  <p><%= link_to "list a new costume", new_costume_path %></p>
+
+  <p><%= link_to "my costumes", my_costumes_costumes_path %></p>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="container my-3" style="height: 140vh">
+<h1>My costume listing</h1>
+
+<p><%= "You haven't listed any costumes yet!" if @costumes.empty? %></p>
+
+<ul>
+<% @costumes.each do |costume| %>
+  <li> <%= link_to costume.name, costume_path(costume) %> <%= link_to "update", edit_costume_path(costume) %> <%= link_to "delete", costume_path(costume), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{costume.name} from your listings?"}, class: 'text-danger' %>
+</li>
+<% end %>
+</ul>
+
+<p><%= link_to "list a new costume", new_costume_path %></p>
+
+</div>
