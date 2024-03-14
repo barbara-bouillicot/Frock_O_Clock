@@ -1,31 +1,30 @@
 // Specific CSS for your home-page
 
-.banner{
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("frockoclock_homepage_image.png");
-  margin : 0;
-  background-size: cover;
-  transform: scaleX(-1);
-  background-repeat: no-repeat;
-  height: auto;
-  width: 100%;
-  overflow: hidden;
-  background-position: 50%, 50%;
+.background{
+  background-color: rgb(248, 235, 235);
+  margin : auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 400px;
+  width: 1150px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: block;
 }
 
-.banner h1{
-  font-family: "Rubik Mono One", monospace;
+.background h1{
+  font-family: "Finger Paint";
   font-weight: 400;
   font-style: normal;
-  color: rgba(255,255,255,0.7);
+  color: #F52600;
   font-size: 60px;
   text-align: left;
   margin-bottom: 30px;
-  word-spacing: -40px;
-  margin-top: 250px;
-  margin-left: 60px;
+  word-spacing: 20px;
 }
 
-.banner h3 {
+.background h3 {
   font-family: "Rubik Mono One", monospace;
   font-weight: 400;
   font-style: normal;
@@ -37,7 +36,6 @@
 }
 
 .slogan {
-  transform: scaleX(-1);
   padding: 16px;
   width: 100%;
 }
@@ -50,28 +48,28 @@
 }
 
 .home-btn {
-  padding: 30px 60px;
-  background-color: rgba(51, 117, 114, 0.7);
+  padding: 20px 50px;
+  background-color: #F52600;
   color: white;
   border-radius: 25px;
   font-size: 20px;
   display: block;
-  border-color: rgb(48, 78, 78) !important;
-  font-family: "Rubik Mono One", monospace;
-  font-weight: 400;
+  border-color: #ffffff !important;
+  font-family: "Finger Paint", monospace;
+  font-weight: 350;
   font-style: normal;
   font-weight: lighter;
   position: fixed;
   box-sizing: border-box;
-  margin-left: 600px;
-  box-shadow: 5px 5px 10px black;
+  margin-right: 600px;
+  box-shadow: 5px 5px 10px rgb(246, 230, 230);
   transition: .2s ease-in-out 0s;
 }
 .home-btn:hover{
-  background-color: rgba(36, 83, 81, 0.7);
+  background-color: #000000;
   color: rgba($color: white, $alpha: 0.8);
   transform: scale(0.96);
-  box-shadow: 2px 2px 5px black;;
+  box-shadow: 2px 2px 5px rgb(104, 104, 104);;
 }
 
 .notice {

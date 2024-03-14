@@ -18,12 +18,9 @@ class Booking < ApplicationRecord
     status == 'pending'
   end
 
-  private
 
-    def booking_duration
-      (start_date..end_date).count
-    end
+  def booking_duration
+    (start_date..end_date).count
+  end
 
-
-  private
 end
