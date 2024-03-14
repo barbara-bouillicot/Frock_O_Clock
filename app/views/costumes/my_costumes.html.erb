@@ -1,15 +1,40 @@
 <div class="container my-3" style="height: 140vh">
-<h1>My costume listing</h1>
+  <h1 class="text-center">My costume listings</h1>
 
-<p><%= "You haven't listed any costumes yet!" if @costumes.empty? %></p>
+  <p class="text-center"><%= "You haven't listed any costumes yet!" if @costumes.empty? %></p>
 
-<ul>
-<% @costumes.each do |costume| %>
-  <li> <%= link_to costume.name, costume_path(costume) %> <%= link_to "update", edit_costume_path(costume) %> <%= link_to "delete", costume_path(costume), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{costume.name} from your listings?"}, class: 'text-danger' %>
-</li>
-<% end %>
-</ul>
+  <p class="text-center">
+    <%= link_to new_costume_path do %>
+      <button type="button" class="btn btn-primary btn-lg"><i class="fa-solid fa-plus"></i></button>
+    <% end %>
+  </p>
 
-<p><%= link_to "list a new costume", new_costume_path %></p>
+  <div class="costume-card-container">
+    <% @costumes.each do |costume| %>
+      <div class="costume-index-card">
+      <div class="costume-index-card-img" style="background-image:url('<%= cl_image_path costume.photos.first.key %>')">
+
+      </div>
+        <div class="card-body">
+          <h2><%= link_to costume.name, costume_path(costume) %></h2>
+          <h5 class="card-subtitle mb-2 text-muted">£<%= costume.price %>/day</h5>
+          <p class="card-text"><%= costume.description %></p>
+          <p class="text-justify">
+            <%= link_to edit_costume_path(costume) do %>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-marker"></i></i></button>
+            <% end %>
+            <%= link_to costume_path(costume), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{costume.name} from your listings?"} do %>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash"></i></button>
+            <% end %>
+
+          </p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+  <br>
+
+
 
 </div>
