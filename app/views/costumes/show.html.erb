@@ -1,6 +1,10 @@
 <div class="container">
 <h1><%= @costume.name %></h1>
 <h3>$<%= @costume.price %></h3>
+<% @costume.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill" %>
+<% end %>
+
 <p><em>category:</em> <%= @costume.category %></p>
 <p><em>size:</em> <%= @costume.size %></p>
 <p><em>material:</em> <%= @costume.material %></p>

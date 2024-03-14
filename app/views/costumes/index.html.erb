@@ -4,6 +4,9 @@
   <ul>
     <% @costumes.each do |costume| %>
       <li> <%= link_to costume.name, costume_path(costume) %></li>
+        <% costume.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill" %>
+        <% end %>
     <% end %>
   </ul>
 
