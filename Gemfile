@@ -2,8 +2,7 @@ source "https://rubygems.org"
 
 gem "devise"
 
-# to hide the cloudinary secret key
-gem "dotenv-rails"
+gem "cloudinary"
 
 ruby "3.1.2"
 
