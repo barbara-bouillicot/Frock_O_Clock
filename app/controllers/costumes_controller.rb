@@ -21,6 +21,13 @@ class CostumesController < ApplicationController
 
   def show
     @costume = Costume.find(params[:id])
+    @user = @costume.user
+    @marker = {
+      lat: @user.latitude,
+      lng: @user.longitude,
+      info_window_html: render_to_string(partial: "info_window", locals: { costume: @costume }),
+      marker_html: render_to_string(partial: "marker", locals: { costume: @costume })
+    }
   end
 
   def edit
