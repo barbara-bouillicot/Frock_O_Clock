@@ -1,0 +1,25 @@
+.btn-accept{
+  background-color: #DB4A2B;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 95px;
+  height: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-reject{
+    background-color: black;
+    color: #DB4A2B;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 95px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

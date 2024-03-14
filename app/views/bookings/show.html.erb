@@ -9,6 +9,7 @@
     <td><strong>Total : </strong> <%= number_to_currency(@booking.booking_duration) %></td>
     </tbody>
   </table>
+
 <% if @booking.user == current_user %>
 <%=  link_to "Delete", booking_path(@booking), data: {turbo_confirm: "Are you sure?", turbo_method: :delete}, class: "btn btn-primary m-2" %>
 <% end %>
