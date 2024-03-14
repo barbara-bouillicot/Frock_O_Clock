@@ -16,3 +16,28 @@
 body {
   background-color: white;
  }
+
+.search-input{
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  width: 40%;
+  color: rgb(187, 184, 184);
+}
+
+.btn-search{
+  background-color:#DB4A2B;
+  color: white;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  padding: 0 14px;
+  transition: 0.1s;
+
+  :hover{
+    background-color: white;
+    color: #DB4A2B;
+  }
+
+  .fas{
+    font-size: 22px;
+  }
+}
