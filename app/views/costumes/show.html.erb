@@ -10,13 +10,12 @@
 <p><em>material:</em> <%= @costume.material %></p>
 <p><em>description:</em> <%= @costume.description %></p>
 
-
-<p><a href="#" class="text-success">book this costume!</a></p>
-
+<% unless current_user == @costume.user %>
+<p><%= link_to "Book me", new_costume_booking_path(@costume) %></p>
+<% end  %>
 <p><%= link_to "my costumes", my_costumes_costumes_path %></p>
 
 <p><%= link_to "all costumes", costumes_path %></p>
-
 
 
 </div>

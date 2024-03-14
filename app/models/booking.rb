@@ -13,6 +13,10 @@ class Booking < ApplicationRecord
     self.total = total_price
   end
 
+  def pending?
+    status == 'pending'
+  end
+
   private
 
   def booking_duration
