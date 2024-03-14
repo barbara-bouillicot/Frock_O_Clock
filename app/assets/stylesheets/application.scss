@@ -11,8 +11,11 @@
 @import "components/index";
 @import "pages/index";
 
-
-
 body {
   background-color: white;
  }
+
+ h1 {
+  font-family: 'Finger Paint';font-size: 22px;
+  margin-top: 8px;
+}
