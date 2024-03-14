@@ -1,0 +1,24 @@
+<h1 class="text-center">All Bookings</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Booking ID</th>
+      <th>User</th>
+      <th>Costume</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  <thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+    <tr>
+      <td><%= link_to booking.id, booking_path(booking) %></td>
+      <td><%= booking.user.first_name %></td>
+      <td><%= booking.costume.name %></td>
+      <td><%= booking.start_date %></td>
+      <td><%= booking.end_date %></td>
+    </tr>
+  <% end %>
+ </tbody>
+</table>

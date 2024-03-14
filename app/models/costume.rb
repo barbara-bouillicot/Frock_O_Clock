@@ -7,3 +7,4 @@ class Costume < ApplicationRecord
   validates :description, length: { in: 6..200 }
   validates :photos, presence:true
 end
+

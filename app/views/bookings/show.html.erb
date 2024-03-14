@@ -1,0 +1,14 @@
+<h1 class="text-center">Booking Details</h1>
+
+
+<table class="table">
+  <tbody>
+    <td><strong>Start Date : </strong> <%= @booking.start_date %><td>
+    <td><strong>End Date : </strong> <%= @booking.end_date %><td>
+    <td><strong>Price : </strong> <%= number_to_currency(@booking.price) %><td>
+    <td><strong>Total : </strong> <% number_to_currency(@booking.total) %></td>
+    </tbody>
+  </table>
+<% if @booking.user == current_user %>
+<%=  link_to "Delete", booking_path(@booking), data: {turbo_confirm: "Are you sure?", turbo_method: :delete}, class: "btn btn-primary m-2" %>
+<% end %>

@@ -1,6 +1,21 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :costume
+  before_save :calculate_total_price
 
-  validates :start_date, :end_date, :price, :total, presence: true
+  @@shipping_price = 5
+
+  validates :start_date, :end_date, :price, presence: true
+
+
+  def calculate_total_price
+    total_price = (costume.price * booking_duration) + @@shipping_price
+    self.total = total_price
+  end
+
+  private
+
+  def booking_duration
+    (end_date - start_date).to_i
+  end
 end
