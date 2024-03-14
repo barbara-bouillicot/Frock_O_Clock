@@ -2,7 +2,10 @@ class BookingsController < ApplicationController
 
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
+    @booking_requests = current_user.costumes.map do | costume|
+      costume.bookings
+    end.flatten
   end
 
   def show
@@ -34,9 +37,19 @@ class BookingsController < ApplicationController
     redirect_to bookings_url, notice: "Booking successfully deleted!"
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to  bookings_path
+    else
+      # render # where was the booking update form?
+      redirect_to  bookings_path
+    end
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :price, :total)
+    params.require(:booking).permit(:start_date, :end_date, :price, :total, :status)
   end
 end

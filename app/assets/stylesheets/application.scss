@@ -11,8 +11,39 @@
 @import "components/index";
 @import "pages/index";
 
-
+@import url("https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css");
+@import url("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css");
 
 body {
   background-color: white;
  }
+
+
+ h1 {
+  font-family: 'Finger Paint';font-size: 22px;
+  margin-top: 8px;
+
+.search-input{
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  width: 40%;
+  color: rgb(187, 184, 184);
+}
+
+.btn-search{
+  background-color:#DB4A2B;
+  color: white;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  padding: 0 14px;
+  transition: 0.1s;
+
+  :hover{
+    background-color: white;
+    color: #DB4A2B;
+  }
+
+  .fas{
+    font-size: 22px;
+  }
+}

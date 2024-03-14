@@ -10,12 +10,17 @@ class Booking < ApplicationRecord
 
   def calculate_total_price
     total_price = (costume.price * booking_duration) + @@shipping_price
-    self.total = total_price
+    return total_price
   end
 
-  private
+
+  def pending?
+    status == 'pending'
+  end
+
 
   def booking_duration
-    (end_date - start_date).to_i
+    (start_date..end_date).count
   end
+
 end

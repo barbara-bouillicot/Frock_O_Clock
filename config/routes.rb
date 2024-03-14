@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
 
-  resources :bookings, only: [:index , :show , :destroy]
+  resources :bookings, only: [:index , :show , :destroy, :update]
+
 
   resources :costumes, only:[ :index, :new, :create, :show, :destroy, :edit, :update, :my_costumes ] do
     resources :bookings, only:[:new, :create]
@@ -19,5 +20,4 @@ Rails.application.routes.draw do
       get :my_costumes
     end
   end
-
 end
