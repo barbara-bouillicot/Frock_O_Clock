@@ -1,13 +1,39 @@
+
+<div class="row justify-content-center ">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: costumes_path, method: :get, class: "d-flex justify-content-center " do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control search-input",
+            placeholder: ""
+        %>
+
+     <button class="btn btn-search" type="submit">
+      <i class="fas fa-search"></i>
+    </button>
+    <% end %>
+  </div>
+</div>
+
+
+
+
 <div class="container my-3" style="height: 140vh">
   <h1>All Costumes</h1>
 
+  
+
   <ul>
+    <% if @costumes.any? %>
     <% @costumes.each do |costume| %>
       <li> <%= link_to costume.name, costume_path(costume) %></li>
         <% costume.photos.each do |photo| %>
         <%= cl_image_tag photo.key, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill" %>
         <% end %>
     <% end %>
+     <% else %>
+          <em>Sorry, no costumes found.</em>
+        <% end %>
   </ul>
 
   <p><%= link_to "list a new costume", new_costume_path %></p>
