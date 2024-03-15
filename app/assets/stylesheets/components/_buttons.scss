@@ -24,6 +24,7 @@
     align-items: center;
   }
 
+
   .button-cleanup, .button-cleanup:active, .button-cleanup:visited {
     color: #DB4A2B;
     background-color: white;
@@ -40,3 +41,23 @@
   .booking_status {
     margin-bottom: 0!important;
   }
+
+.btn-form{
+  background-color:#DB4A2B;
+  color: white;
+  font-family: "finger paint";
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: 0.1s;
+
+  :hover{
+    color: #DB4A2B;
+  }
+}
+
+.links-login{
+  text-decoration: none;
+  color: black;
+  font-family: "finger paint";
+  font-size: 12px;
+}
