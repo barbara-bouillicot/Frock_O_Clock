@@ -18,10 +18,9 @@
         <div class="card-body">
           <h2><%= link_to costume.name, costume_path(costume) %></h2>
           <h5 class="card-subtitle mb-2 text-muted">£<%= costume.price %>/day</h5>
-          <p class="card-text"><%= costume.description %></p>
           <p class="text-justify">
             <%= link_to edit_costume_path(costume) do %>
-              <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-marker"></i></i></button>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-marker"></i></button>
             <% end %>
             <%= link_to costume_path(costume), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{costume.name} from your listings?"} do %>
               <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash"></i></button>

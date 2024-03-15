@@ -24,32 +24,27 @@
 
   <div class="costume-card-container">
 
-  
-
-
     <% if @costumes.any? %>
 
     <% @costumes.each do |costume| %>
-      <div class="costume-index-card">
-      <div class="costume-index-card-img" style="background-image:url('<%= cl_image_path costume.photos.first.key %>')">
 
-      </div>
+      <div class="costume-index-card">
+      <div class="costume-index-card-img" style="background-image:url('<%= cl_image_path costume.photos.first.key unless costume.photos.empty? %>')"></div>
         <div class="card-body">
           <h2><%= link_to costume.name, costume_path(costume) %></h2>
           <h5 class="card-subtitle mb-2 text-muted">£<%= costume.price %>/day</h5>
-          <p class="card-text"><%= costume.description %></p>
+          <p class="card-text"><i class="fa-solid fa-location-dot"></i> <%= costume.user.location %></p>
         </div>
       </div>
+
     <% end %>
 
      <% else %>
           <em>Sorry, no costumes found.</em>
         <% end %>
- 
+
 
   </div>
   <br>
-
-
 
 </div>
