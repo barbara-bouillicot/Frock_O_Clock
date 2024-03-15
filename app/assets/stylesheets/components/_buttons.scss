@@ -24,6 +24,24 @@
     align-items: center;
   }
 
+
+  .button-cleanup, .button-cleanup:active, .button-cleanup:visited {
+    color: #DB4A2B;
+    background-color: white;
+    border-color: #DB4A2B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  .button-cleanup:hover {
+    background-color: #DB4A2B;
+    border-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  .booking_status {
+    margin-bottom: 0!important;
+  }
+
 .btn-form{
   background-color:#DB4A2B;
   color: white;

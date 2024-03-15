@@ -13,12 +13,17 @@
   padding: 0 14px;
   transition: 0.1s;
 
+  .fas{
+    font-size: 22px;
+    transition: 0.1s;
+  }
+
   :hover{
-    background-color: white;
     color: #DB4A2B;
   }
 
-  .fas{
+  .fas:hover{
     font-size: 22px;
+    color: #DB4A2B;
   }
 }
