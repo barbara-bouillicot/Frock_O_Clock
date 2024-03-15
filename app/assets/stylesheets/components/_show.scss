@@ -1,3 +1,82 @@
+
+.costume {
+  justify-content: center;
+}
+
+.photos {
+  width: 1000px;
+  height: 1000px;
+}
+
+.content {
+  background-color: #fdc8c06d;
+  width: 600px;
+  height: auto;
+  padding: 60px;
+  box-shadow: 0px 0px 10px #b31e036d;
+}
+
+.content h1 {
+  font-size: 40px;
+  margin-top: 0;
+  padding-bottom: 16px;
+}
+
+.content h3 {
+  font-size: 40px;
+  padding-bottom: 16px;
+  border-bottom: solid;
+  border-color: #DB4A2B;
+  margin-bottom: 16px;
+}
+
+.detail-name p {
+  color: #db4b2bd8;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: none;
+}
+
+.detail-content p {
+  font-size: 30px;
+  color: #db4b2bd8;
+}
+
+.map {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.links {
+  margin-top: 50px;
+}
+
+.links a {
+  text-decoration: none !important;
+  color: #db4b2bd8;
+  font-size: 30px;
+}
+
+.links a:hover {
+  color: #db4b2b8a;
+}
+
+.details {
+  border-bottom: solid;
+  border-color: #DB4A2B;
+  margin-top: 36px;
+  padding-bottom: 25px;
+}
+
+.description p {
+  font-size: 30px;
+  color: #db4b2bd8;
+}
+
+.description {
+  margin-top: 30px;
+
 .show_buttons-container {
   margin: 15px;
   margin-top: 15px;
@@ -8,4 +87,5 @@
 
 .show_buttons-container:not(:last-child) {
   margin-bottom: 20px; /* Adjust as needed for more space between button containers */
+
 }
