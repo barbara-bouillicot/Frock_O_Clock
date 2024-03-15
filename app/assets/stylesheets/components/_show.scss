@@ -1,0 +1,11 @@
+.show_buttons-container {
+  margin: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.show_buttons-container:not(:last-child) {
+  margin-bottom: 20px; /* Adjust as needed for more space between button containers */
+}

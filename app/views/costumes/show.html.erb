@@ -17,13 +17,21 @@
 </div>
 
 
-<% unless current_user == @costume.user %>
-<p><%= link_to "Book me", new_costume_booking_path(@costume) %></p>
-<% end  %>
+<div class="show_buttons_container">
 
-<p><%= link_to "my costumes", my_costumes_costumes_path %></p>
+<div class="show_button-container mt-3">
+  <% unless current_user == @costume.user %>
+    <a href="<%= new_costume_booking_path(@costume) %>" class="btn btn-form">Book me</a>
+  <% end  %>
+</div>
 
-<p><%= link_to "all costumes", costumes_path %></p>
+<div class="show_button-container">
+  <a href="/costumes/my_costumes" class="btn btn-form">My Costumes</a>
+</div>
 
+<div class="show_button-container">
+  <a href="/costumes" class="btn btn-form">All Costumes</a>
+</div>
+</div>
 
 </div>
