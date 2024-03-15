@@ -1,5 +1,20 @@
+<div class="footer d-flex flex-wrap justify-content-between align-items-center py-3 border-top" style="margin-bottom: 0 !important; margin-top: 1px;">
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+    </a>
+    <span class="mb-3 mb-md-0 text-muted">&copy; Frock O Clock</span>
+  </div>
+
+  <div class="col-md-4 text-center">
+    <%= image_tag "logo.png", class: "logo" %>
+  </div>
 
 
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="me-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+    <li class="mx-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+    <%= link_to costumes_path, class: "text-body-secondary me-3" do %>
 
   <div class="footer d-flex flex-wrap justify-content-between align-items-center py-3 border-top" style="margin-bottom: 0 !important; margin-top: 1px; bottom: 0; right: 0; left: 0; z-index: 1030">
     <div class="col-md-4 d-flex align-items-center">
@@ -12,9 +27,8 @@
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <%= link_to costumes_path, class: "text-body-secondary" do %>
+
       <i class="fa-solid fa-house"></i>
-      <% end %>
-      <li class="mx-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-      <li class="me-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
-    </ul>
-  </div>
+    <% end %>
+  </ul>
+</div>
