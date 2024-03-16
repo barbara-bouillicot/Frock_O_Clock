@@ -6,7 +6,7 @@
     <td><strong>Start Date : </strong> <%= @booking.start_date %><td>
     <td><strong>End Date : </strong> <%= @booking.end_date %><td>
     <td><strong>Price : </strong> <%= number_to_currency(@booking.price) %><td>
-    <td><strong>Total : </strong> <%= number_to_currency(@booking.booking_duration) %></td>
+    <td><strong>Total : </strong> <%= number_to_currency(@booking.calculate_total_price) %></td>
     </tbody>
   </table>
 
